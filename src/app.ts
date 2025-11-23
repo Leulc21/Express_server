@@ -6,6 +6,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Server is running');
+});
+
 // Routes
 app.use('/api/items', itemRoutes);
 
